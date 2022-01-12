@@ -1,4 +1,4 @@
-# main2.py
+# main1.py
 
 # importando funciones específicas del módulo calculadora
 from calculadora import sumar, restar, multiplicar, dividir

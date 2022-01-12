@@ -1,4 +1,4 @@
-# main1.py
+# main2.py
 
 # importando el módulo calculadora con un alias
 import calculadora as calc
