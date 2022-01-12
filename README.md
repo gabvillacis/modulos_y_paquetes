@@ -1,2 +1,2 @@
-# mod_y_paq
-Ejemplos y ejercicios de módulos y paquetes de Python
+# Módulos y Paquetes Python: Ejercicios
+Ejercicios referentes a la implementación de módulos y paquetes de Python
