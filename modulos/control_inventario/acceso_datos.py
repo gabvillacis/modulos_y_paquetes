@@ -22,45 +22,39 @@
 #       es una tupla (codigo, descripcion), donde 'codigo' es el código para una ubicación del inventario
 #       y 'descripcion' es una cadena que describe esa ubicación, de tal manera que el usuario sepa dónde está.
 
-items = []
-productos = []
-ubicaciones = []
+_items = []
+_productos = []
+_ubicaciones = []
 
 def obtener_items():
-    global items
-    return items
+    global _items
+    return _items
 
-def obtener_productos():
-    global productos
-    return productos
+def get_productos():
+    global _productos
+    return _productos
 
-def obtener_ubicaciones():
-    global ubicaciones
-    return ubicaciones
+def set_productos(productos):
+    global _productos
+    _products = productos
+    
+def get_ubicaciones():
+    global _ubicaciones
+    return _ubicaciones
 
-def agregar_item(codigo_producto, codigo_ubicacion):
-    global items
-    items.append((codigo_producto, codigo_ubicacion))
+def set_ubicaciones(ubicaciones):
+    global _ubicaciones
+    _ubicaciones = ubicaciones
 
-def quitar_item(codigo_producto, codigo_ubicacion):
-    global items
-    for i in range(len(items)):
-        _codigo_prod, _codigo_ubic = items[i]
-        if _codigo_prod == codigo_producto and _codigo_ubic == codigo_ubicacion:
-            del items[i]
+def agregar_item(codigo_prod, codigo_ubic):
+    global _items
+    _items.append((codigo_prod, codigo_ubic))
+
+def quitar_item(codigo_prod, codigo_ubic):
+    global _items
+    for i in range(len(_items)):
+        codigo_producto, codigo_ubicacion = _items[i]
+        if codigo_producto == codigo_prod and codigo_ubicacion == codigo_ubic:
+            del _items[i]
             return True
     return False
-
-def inicializar_productos(productos):
-    global productos
-    products = productos
-
-def set_locations(locations):
-    """ Set the (currently hardwired) list of inventory locations.
-        Each item in the 'locations' list should be a (code, description)
-        tuple, where 'code is the code for an inventory location, and
-        'description' is a string describing that location so that the user
-        knows where it is.
-    """
-    global _locations
-    _locations = locations
