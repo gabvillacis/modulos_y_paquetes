@@ -40,7 +40,7 @@ print(datetime.strftime(fecha_actual, "%d/%m/%Y"))
 print(datetime.strftime(fecha_actual, "%H:%M"))
 
 # instanciando una fecha desde un string
-f1 = datetime.strptime("01.2022.30", "%m.%Y.%d")
+f1 = datetime.strptime("12.2022.31", "%m.%Y.%d")
 f2 = datetime.now()
 
 print(f"Fecha 1: {f1}")
