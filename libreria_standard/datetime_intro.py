@@ -24,6 +24,10 @@ print(hora_actual)
 solo_fecha = date.today()
 print(solo_fecha)
 
+# instanciando una fecha desde una marca de tiempo
+fecha_from_ts = datetime.fromtimestamp(time.time())
+print(fecha_from_ts)
+
 # formateando (personalizar la presentación) de una fecha
 fecha_act = datetime.now()
 print(str(fecha_act.day) + "/" + str(fecha_act.month) + "/" + str(fecha_act.year))
@@ -36,9 +40,14 @@ print(datetime.strftime(fecha_actual, "%d/%m/%Y"))
 print(datetime.strftime(fecha_actual, "%H:%M"))
 
 # instanciando una fecha desde un string
-fecha_from_string = datetime.strptime("01.2022.30", "%m.%Y.%d")
-print(fecha_from_string)
+f1 = datetime.strptime("01.2022.30", "%m.%Y.%d")
+f2 = datetime.now()
 
-# instanciando una fecha desde una marca de tiempo
-fecha_from_ts = datetime.fromtimestamp(time.time())
-print(fecha_from_ts)
+print(f"Fecha 1: {f1}")
+print(f"Fecha 2: {f2}")
+
+# comparando fechas
+if f1>f2:
+    print("Fecha1 es mayor")
+else:
+    print("Fecha2 es mayor")
