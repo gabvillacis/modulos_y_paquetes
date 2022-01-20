@@ -17,10 +17,11 @@ print(path.absolute())
 
 directorio_actual = Path()
 
-# listando el directorio
+# listando el contenido del directorio
 for p in directorio_actual.iterdir():
     print(p)
 
+# obteniendo el contenido del directorio como una lista
 paths = [p for p in directorio_actual.iterdir()]
 print(paths)
 
