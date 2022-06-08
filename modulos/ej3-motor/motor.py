@@ -1,3 +1,10 @@
+"""
+TODO Quitar las funciones turn_on_lights/turn_off_lights,
+dado que no están directamente relacionadas con el motor.
+
+Replantear el ejemplo en el contexto <carro usa el motor>.
+"""
+
 def start():
     print('Motor encendido')
 
