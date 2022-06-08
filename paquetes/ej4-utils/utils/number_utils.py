@@ -1,4 +1,4 @@
-# helpers/number_helpers.py
+# utils/number_utils.py
 
 """ Convertir una cadena de texto {@param str} a un número entero,
     retornando un valor por defecto {@param default_value} si la conversión falla.

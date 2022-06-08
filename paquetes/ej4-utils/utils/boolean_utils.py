@@ -1,4 +1,4 @@
-# helpers/boolean_helpers.py
+# utils/boolean_utils.py
 
 """ Negar un boolean {@param bool}.
     Ejemplos:
