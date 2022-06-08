@@ -48,18 +48,6 @@ def capturar_codigo_producto():
     codigo = input("Ingrese el código del producto: ").strip().upper()
     return codigo
 
-
-def mostrar_reporte(inventario_productos):
-    print()
-    print('----- Reporte de Inventario -----')
-    i = 1
-    print('No.' + tab + 'Código' + tab + 'Nombre'.ljust(25)  + tab + 'Precio')
-    for prod in inventario_productos:
-        print(f'{i}{tab}{prod.codigo.ljust(6)}{tab}{prod.nombre.ljust(25)}{tab}{prod.precio}')
-        i += 1
-    print('---------------------------------')
-
-
 def mostrar_mensaje(mensaje):
     print()
     print(mensaje)
