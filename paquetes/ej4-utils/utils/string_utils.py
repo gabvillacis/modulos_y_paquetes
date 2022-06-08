@@ -1,4 +1,4 @@
-# helpers/string_helpers.py
+# utils/string_utils.py
 
 """ Invertir una cadena de texto {@param in_str}
     Ejemplo: reverse("Hola mundo") -> "odnum aloH"
