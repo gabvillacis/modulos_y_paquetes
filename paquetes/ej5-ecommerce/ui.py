@@ -27,6 +27,10 @@ def capturar_opcion_menu(opciones_permitidas: list) -> str:
             return opcion
 
 
+def capturar_texto(instruccion: str) -> str:
+    return input(f'{instruccion}')
+
+
 def capturar_numero(instruccion: str) -> float:
     while True:
         try:
@@ -36,8 +40,6 @@ def capturar_numero(instruccion: str) -> float:
 
 
 def capturar_producto() -> Producto:
-    print()
-    print(" --- INGRESO DE PRODUCTO --- ")
     print()
     codigo = input("Ingrese el código: ").strip().upper()
     nombre = input("Ingrese el nombre: ").strip()
@@ -52,6 +54,9 @@ def capturar_codigo_producto() -> str:
     return codigo
 
 
-def mostrar_lista_en_formato_fila(valores: list) -> None:
-    for valor in valores:
-        print('____')
+def mostrar_lista_en_formato_tabular(valores: list) -> None:
+    print(*valores, sep='\t\t\t')
+
+
+def pausar_ejecucion() -> None:
+    input('Presione Enter para continuar >')

@@ -14,5 +14,19 @@ class InventarioService:
             raise Exception(f'El producto {producto.codigo} ya existe en el inventario')
 
 
-    def quitar_producto(self, producto: Producto) -> None:
-        self.inventario.quitar_producto(producto)
+    def quitar_producto(self, codigo_producto: str) -> None:
+        producto_existente = self.inventario.buscar_producto_por_codigo(codigo_producto)
+        if producto_existente == None:
+            raise Exception(f'El producto {codigo_producto} no existe en el inventario')
+        else:            
+            self.inventario.quitar_producto(producto_existente)
+    
+    
+    def obtener_productos(self) -> list:
+        return self.inventario.productos
+
+    
+    def obtener_producto_por_codigo(self, codigo_producto: str) -> Producto:
+        producto_existente = self.inventario.buscar_producto_por_codigo(codigo_producto)
+        if producto_existente == None:
+            raise Exception(f'El producto {codigo_producto} no existe en el inventario')
