@@ -1,23 +1,45 @@
-from ui_utils import mostrar_menu, capturar_opcion_menu
-from inventario.ui import mostrar_menu_inventario
-from ventas.ui import mostrar_menu_ventas
+import ui
+from inventario.logica import InventarioService
+
+inventario_service = InventarioService()
 
 def main() -> None:
+    while True:
+        menu_principal = {  'A': 'AGREGAR PRODUCTO',
+                            'B': 'QUITAR PRODUCTO',
+                            'C': 'LISTAR PRODUCTOS',
+                            'D': 'AÑADIR PRODUCTO AL CARRITO',
+                            'E': 'QUITAR PRODUCTO DEL CARRITO',
+                            'F': 'FACTURAR',
+                            'G': 'SALIR' }
 
-    menu_principal = {  'A': 'INVENTARIO',
-                        'B': 'VENTAS',
-                        'C': 'SALIR' }
+        ui.mostrar_menu('MENÚ PRINCIPAL', '¿Qué opción desea ejecutar?', menu_principal)
+        opcion = ui.capturar_opcion_menu(menu_principal.keys())
+        
+        if opcion == 'A':
+            ejecutar_agregar_producto()
+        elif opcion == 'B':
+            pass
+        elif opcion == 'C':            
+            pass
+        elif opcion == 'D':
+            pass
+        elif opcion == 'E':
+            pass
+        elif opcion == 'F':
+            pass
+        else:
+            break
+        
 
-    mostrar_menu('MENÚ PRINCIPAL', '', menu_principal)
-    opcion = capturar_opcion_menu(menu_principal.keys())
+def ejecutar_agregar_producto() -> None:
+    producto = ui.capturar_producto()
+    try:
+        inventario_service.agregar_producto(producto)
+        ui.mostrar_mensaje(f'El producto {producto.codigo} se agregó exitosamente.')
+    except Exception as ex:
+        ui.mostrar_mensaje(ex)
     
-    if opcion == 'A':
-        mostrar_menu_inventario()
-    elif opcion == 'B':
-        
-    else:
-        exit
-        
 
 if __name__ == "__main__":
     main()
