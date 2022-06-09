@@ -21,7 +21,7 @@ def main() -> None:
         elif opcion == 'B':
             pass
         elif opcion == 'C':            
-            pass
+            ejecutar_listar_productos()
         elif opcion == 'D':
             pass
         elif opcion == 'E':
@@ -39,7 +39,12 @@ def ejecutar_agregar_producto() -> None:
         ui.mostrar_mensaje(f'El producto {producto.codigo} se agregó exitosamente.')
     except Exception as ex:
         ui.mostrar_mensaje(ex)
-    
+
+
+def ejecutar_listar_productos() -> None:
+    for producto in inventario_service.inventario:
+        print(f'{producto.__dict__}')
+        
 
 if __name__ == "__main__":
     main()

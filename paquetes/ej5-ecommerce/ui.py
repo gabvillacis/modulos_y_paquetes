@@ -50,3 +50,8 @@ def capturar_codigo_producto() -> str:
     print()
     codigo = input("Ingrese el código del producto: ").strip().upper()
     return codigo
+
+
+def mostrar_lista_en_formato_fila(valores: list) -> None:
+    for valor in valores:
+        print('____')
