@@ -1,7 +1,6 @@
 # %%
 # importando módulos datetime y relativedelta
 from datetime import date, datetime, timedelta
-import re
 from dateutil.relativedelta import relativedelta
 
 # %%
@@ -74,8 +73,8 @@ print(f'Fecha {fecha} desplazada 1 día, 3 horas y 10 minutos: {fecha4}')
 
 # %%
 #Permitir ingresar por teclado la edad actual de una persona, y:
-# - Calcule la edad
-# - Identificar la generación a la cual pertenece: Builders, Baby Boomers, Generación X, Generación Y (Millenials), Generación Z ó Generación α
+# - Calcule su edad actual
+# - Identifique la generación a la cual pertenece: Builders, Baby Boomers, Generación X, Generación Y (Millenials), Generación Z ó Generación α
 
 respuesta = input('Cual es su fecha nacimiento? (dd-mm-aaaa) >')
 
