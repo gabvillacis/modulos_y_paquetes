@@ -5,9 +5,9 @@ ___
 2. Determine el número de días que faltan hasta el final del presente año.
 ___
 3. Usando la función strptime() convierta las siguientes cadenas de texto a fechas:
-    - ‘3 March 1995’
-    - 3/9/1995’
-    - ‘21-07-2021’
+    - '3 March 1995'
+    - '3/9/1995'
+    - '21-07-2021'
 ___
 4. Usando la función strftime() formatee la fecha: 2021-04-20 11:30:00 a los siguientes formatos:
     - 2021-04-20
