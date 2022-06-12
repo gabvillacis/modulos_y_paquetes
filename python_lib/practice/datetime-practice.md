@@ -9,7 +9,7 @@ ___
     - '3/9/1995'
     - '21-07-2021'
 ___
-4. Usando la función strftime() formatee la fecha: 2021-04-20 11:30:00 a los siguientes formatos:
+4. Usando la función strptime() formatee la fecha: 2021-04-20 11:30:00 a los siguientes formatos:
     - 2021-04-20
     - 20-04-2021
     - 04/04/21 11:30
