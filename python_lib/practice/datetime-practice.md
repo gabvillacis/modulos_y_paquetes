@@ -12,7 +12,7 @@ ___
 4. Usando la función strftime() formatee la fecha: 2021-04-20 11:30:00 a los siguientes formatos:
     - 2021-04-20
     - 20-04-2021
-    - 04/04/21 11:30
+    - 20/04/21 11:30
     - 11:30:00
 ___
 5. Partiendo de la fecha 2021-01-01 00:00:00, obtener las siguientes:
