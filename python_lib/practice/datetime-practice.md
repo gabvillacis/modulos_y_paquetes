@@ -21,9 +21,8 @@ ___
     - desplazada por -4 minutos
     - desplazada por 1 día, 3 horas y 10 minutos
 ___
-6. Permitir ingresar por teclado la edad actual de una persona, y:
-- Calcule su fecha de nacimiento, mostrarla en formato: Nombre día, DD-MM-YYYY, Ej.: Monday, 08-07-1974
-
-- Identificar la generación a la cual pertenece: Builders, Baby Boomers, Generación X, Generación Y (Millenials), Generación Z ó Generación α
+6. Permitir ingresar por teclado la fecha de nacimiento de una persona, y:
+- Calcule su edad actual
+- Identifique la generación a la cual pertenece: Builders, Baby Boomers, Generación X, Generación Y (Millenials), Generación Z ó Generación α
 
 ![grupos-generacionales](https://user-images.githubusercontent.com/55613545/173242589-67ffd58e-d59f-4e3a-ba8b-9d3d87e0cf8f.png)
