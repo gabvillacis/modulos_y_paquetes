@@ -81,6 +81,7 @@ def ejecutar_opc_agregar_a_carrito() -> None:
         producto = inventario_service.obtener_producto_por_codigo(codigo)        
         cantidad = ui.capturar_numero('Ingrese la cantidad: ')
         item = Item(None, producto, cantidad)
+        
         ventas_service.agregar_al_carrito(item)
         ui.mostrar_mensaje(f'El producto {codigo} se agregó exitosamente al carrito.')
 
@@ -92,15 +93,19 @@ def ejecutar_opc_agregar_a_carrito() -> None:
 
 def ejecutar_opc_facturar():
     ui.mostrar_mensaje(' --- FACTURAR --- ')
-    cedula = ui.capturar_texto('Ingrese la cédula del cliente: ')
-    nombre = ui.capturar_texto('Ingrese el nombre del cliente: ')
-    email = ui.capturar_texto('Ingrese el email del cliente: ')
+    
+    if len(ventas_service.obtener_items_del_carrito()) == 0:
+        ui.mostrar_mensaje('No ha añadido items al carrito.')
+    else:    
+        cedula = ui.capturar_texto('Ingrese la cédula del cliente: ')
+        nombre = ui.capturar_texto('Ingrese el nombre del cliente: ')
+        email = ui.capturar_texto('Ingrese el email del cliente: ')
 
-    try:
-        ventas_service.facturar(cedula, nombre, email)
-        ui.mostrar_mensaje('La factura se guardó correctamente.')
-    except Exception as ex:
-        ui.mostrar_mensaje(ex)
+        try:
+            ventas_service.facturar(cedula, nombre, email)
+            ui.mostrar_mensaje('La factura se guardó correctamente.')
+        except Exception as ex:
+            ui.mostrar_mensaje(ex)
 
     ui.pausar_ejecucion()
 
