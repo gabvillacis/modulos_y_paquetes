@@ -17,11 +17,11 @@ df.keys()
 df.info()
 
 # %% Seleccionando columnas del dataframe
-df[["Nombre", "Tipo"]]
+df[["Nombre", "Tipo", "Provincia"]]
 
 
 # %% Filtrando registros del dataframe
-df[df["TipoLugar"]=="Rio"]
+df[(df["TipoLugar"]=="Rio") & (df["Provincia"]=="Azuay")]
 
 
 # %% Analizando columnas/variables del dataframe

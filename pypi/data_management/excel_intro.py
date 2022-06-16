@@ -19,15 +19,14 @@ hoja2 = wb.create_sheet("Hoja2")
 print(wb.sheetnames)
 
 # %% Borrando hojas del libro
-del wb['Hoja21']
+del wb['Hoja22']
 print(wb.sheetnames)
 
 # %% Accediendo a una hoja del libro
 hoja = wb.active
 print(f'Hoja activa: {hoja.title}')
 
-hoja = wb['Hoja22']
-wb.active = hoja
+wb.active = wb['Hoja1']
 print(f'Hoja activa: {wb.active.title}')
 
 # %% Acceder a una celda
